@@ -25,6 +25,10 @@ dev = [
     "httpx>=0.28.0",
 ]
 
+[tool.ruff.lint]
+# B008: Depends(...) como default de parâmetro é o padrão idiomático do FastAPI.
+ignore = ["B008"]
+
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["__tests__"]
